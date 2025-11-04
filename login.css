@@ -1,0 +1,206 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONTS */
+
+.emphasise {
+    font-family: "Lexend Giga", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.emphasise-sm {
+    font-family: "Lexend Giga", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.pixelated {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.pixelated-sm {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* BODY */
+
+
+body {
+     background-color: #f7e5f6; 
+}
+
+.cat-user img {
+    width: 100px;
+}
+
+form {
+    background-image: url('./Assets/background-landscape-blossoms.gif');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 40%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    border: 1px solid #f0beed;
+}
+
+.input-box {
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+    text-align: center;
+
+}
+
+.input-box input {
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    border: 1px solid #f0beed;
+    outline: none;
+    color: #000000;
+    background: white;
+    border-radius: 10px;
+}
+
+#toggle {
+    position: absolute;
+    padding-top: 15px;
+    right: 20px;
+    color: #808080;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    right: 15px;
+    ;
+}
+
+
+#form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column !important;
+}
+
+#pass-message {
+    color: #000000;
+    font-size: 15px;
+    display: none;
+}
+
+#pass-strength span {
+    font-size: 15px;
+}
+
+::placeholder {
+    font-size: 15px;
+}
+
+#invalid-pwd-alert {
+    color: white;
+}
+
+.custom-popover {
+    --bs-popover-max-width: 200px;
+    --bs-popover-border-color: #f0beed;
+    --bs-popover-header-bg: #f0beed;
+    --bs-popover-header-color: var(--bs-white);
+    --bs-popover-body-padding-x: 1rem;
+    --bs-popover-body-padding-y: .5rem;
+}
+
+.login-btn {
+    width: 180px !important;
+    background-color: #f0beed !important;
+    color: #000000;
+    margin: 0 auto 5px;
+    padding: 8px 0;
+    font-size: 10px;
+}
+
+.login-btn:hover {
+    background-color: #b2d1ff !important;
+    color: #000000 !important;
+}
+
+.ex-account p a {
+    text-decoration: underline;
+}
+
+.ex-account p {
+    margin-top: 5px;
+}
+
+/* Responsivity */
+
+@media (min-width: 1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 50% !important;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        max-width: 80%;
+    }
+}
+@media (max-width: 992px) {
+
+    form{
+        width: 80% !important;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    form{
+        width: 80% !important;
+    }
+}
+
+@media (max-width: 576px) {
+
+    form{
+        width: 80% !important;
+    }
+}

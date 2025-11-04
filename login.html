@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KinTrix Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="text-center cat-user d-flex flex-column align-items-center">
+        <h2 class="pixelated mt-4">KinTrix</h2>
+        <img src="./Assets/pixelated-cat.png">
+    </div>
+    <form>
+        <div class="container emphasise pt-3 pb-2" id="form-container">
+            <h3 class="pixelated">SIGN UP</h3>
+            <!--Error Messages-->
+            <div class="alert alert-danger alert-dismissible fade show emphasise mb-2" role="alert"
+                id="invalid-pwd-alert" style="display: none;">
+                <strong>Invalid password! </strong> Please retry.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show emphasise mb-2" role="alert" id="email-alert"
+                style="display: none;">
+                <strong>Email Detected </strong> Please retry.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show emphasise mb-2" role="alert" id="easy-pwd-alert"
+                style="display: none;">
+                <strong>Prohibited sequence detected! </strong> Please retry.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show emphasise mb-2" role="alert" id="name-alert"
+                style="display: none;">
+                <strong>Name detected! </strong> Please retry.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <!-- Start of Input -->
+            <div class="my-3 input-box">
+                <input type="text" id="firstNameInput" placeholder="First Name">
+            </div>
+            <div class="mb-3 input-box">
+                <input type="text" id="lastNameInput" placeholder="Last Name">
+            </div>
+            <div class="mb-3 input-box">
+                <input type="text" id="usernameInput" placeholder="Username">
+            </div>
+            <div class="mb-3 input-box">
+                <input type="email" id="emailInput" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Password" id="password" class="emphasise" data-bs-toggle="popover"
+                    data-bs-placement="right" data-bs-custom-class="custom-popover"
+                    data-bs-title="Password requirements"
+                    data-bs-content="Password be a minimum of 8 characters, have at least 1 capital letter, 1 lower case letter, 1 number, and 1 special character from $, @, and #. Password may not contain name, email address, or letter/number sequences such as 'user123', 'password123' etc.">
+                <span id="toggle" onclick="toggle()">
+                    <i class="fa fa-eye"></i>
+                </span>
+                <p id="pass-message">Password is<span id="pass-strength"></span></p>
+            </div>
+        </div>
+
+
+
+        <div class="container pt-2 emphasise-sm">
+            <ul class="list-group" id="conditions" style="display:none;">
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                    id="length-check-container">
+                    At least 8 characters
+                    <span id="length-check"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                    id="lower-check-container">
+                    At least 1 lowercase character
+                    <span id="lower-check"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                    id="upper-check-container">
+                    At least 1 uppercase character
+                    <span id="upper-check"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                    id="number-check-container">
+                    At least 1 number
+                    <span id="number-check"></span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                    id="special-check-container">
+                    At least 1 special character
+                    <span id="special-check"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="text-center mt-2 pixelated-sm">
+            <button type="submit" class="btn login-btn btn-block">
+                Create Account
+            </button>
+        </div>
+    </form>
+
+    <div class="ex-account text-center">
+        <p>Already have an account? Sign in
+            <a href="/">here</a>
+        </p>
+        <div class="divider"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src="./login.js"></script>
+</body>
+
+</html>
