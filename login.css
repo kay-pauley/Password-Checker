@@ -105,21 +105,23 @@ button {
 }
 
 #pass-message {
+    margin-top: 4px;
+    padding: 2px;
+    border-radius: 5px;
     color: #000000;
     font-size: 15px;
     display: none;
+    background-color: white;
+    box-shadow: 5px 5px 3px #f0beed; 
 }
 
-#pass-strength span {
+span #pass-strength {
     font-size: 15px;
+    background-color: white;
 }
 
 ::placeholder {
     font-size: 15px;
-}
-
-#invalid-pwd-alert {
-    color: white;
 }
 
 .custom-popover {
@@ -162,7 +164,12 @@ button {
     .container-md,
     .container-sm,
     .container-xl {
-        max-width: 50% !important;
+        max-width: 70% !important;
+    }
+
+    form{
+        width: 80%;
+        padding: 50px 0;
     }
 }
 
@@ -174,8 +181,6 @@ button {
     .container-sm {
         max-width: 80%;
     }
-}
-@media (max-width: 992px) {
 
     form{
         width: 80% !important;
@@ -189,10 +194,20 @@ button {
     .container-sm {
         max-width: 80%;
     }
+
+    form{
+        width: 80% !important;
+    }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 576px) {
 
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 80%;
+    }
+    
     form{
         width: 80% !important;
     }
